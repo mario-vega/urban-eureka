@@ -54,7 +54,8 @@ namespace Urban.Eureka.API.Controllers
 					return BadRequest(ModelState);
 
 				int id = await _userRepository.Add(user);
-				return CreatedAtAction(nameof(Get), new { id = id }, user);
+				user.Id = id;
+				return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
 			}
 			catch (Exception)
 			{
