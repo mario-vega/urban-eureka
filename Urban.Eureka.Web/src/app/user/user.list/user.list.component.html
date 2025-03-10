@@ -1,0 +1,22 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">E-Mail</th>
+            <th scope="col">Telephone</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of listUsers">
+            <th scope="row">{{ user.id }}</th>
+            <td (click)="selectUser(user)" style="cursor:pointer;">{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.telephone }}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(user.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

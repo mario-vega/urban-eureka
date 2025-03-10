@@ -1,0 +1,6 @@
+{
+    "ApiUrl": {
+        "url": "https://localhost:7267/api",
+        "version": "v1"
+    }
+}
